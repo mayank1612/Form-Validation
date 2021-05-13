@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div
+      id="success"
+      class="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Success: </strong> Your form has been successfully submited.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div
+      id="error"
+      class="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Error: </strong> Unable to submit form. Kindly check all the
+      required feild.
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="container my-2">
+      <h1>Welcome to Form Validation Mini-Project</h1>
+      <hr />
+      <form id="form" class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="firstname" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstname"
+            value=""
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Name should not contain space and should be 1 to 20 characters long.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="lastname" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastname"
+            value=""
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Name should not contain space and should be 1 to 20 characters long.
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="username" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              <ul>
+                <li>Contains digits,alphabets and '_'.</li>
+                <li>Cannot starts with digit or '_'.</li>
+                <li>Username should be 3-10 characters long</li>
+                <li>Cannot end with '_'</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email address</label>
+          <input type="text" class="form-control" id="email" required />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="number" class="form-label">Contact Number</label>
+          <input type="text" class="form-control" id="number" required />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid 10 digit number.
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              id="check"
+              required
+            />
+            <label class="form-check-label" for="check">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button id="btn" class="btn btn-primary" type="submit">
+            Submit form
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
